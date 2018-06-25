@@ -55,11 +55,10 @@ Main components
 -------------------------------- */
 .header {
   position: relative;
-  width:100vw;
   height: 100%;
   height: 100vh;
+  width:auto; 
   margin-bottom: 3em;
-  border: 1px solid ;
   text-align: center;
   padding-top: 20vh;
   background-image:url(../img/back.jpg);
@@ -143,6 +142,11 @@ Main components
   padding-top:0.5em; 
 }
 
+.learn_more{
+  color: #5f420a;
+  font-weight:900;
+  font: size 1.5em; 
+}
 
 @supports not (display:grid) {
   
@@ -185,18 +189,19 @@ Main components
 }
 
 
-.img-gallery .artiste_image{
+.img-gallery .artiste_image{ 
   position:relative;
-  z-index:-1;
+  /* z-index:-1; */
+  height:auto;
+  overflow: hidden; 
+} 
 
-}
 .img-gallery .artiste_image img{
-  height:200px;
+  height:100%;
   width: 100%;
-  object-fit:cover;  
 }
 
- .img-gallery .artiste_name{
+.img-gallery .artiste_name{ 
   position: absolute;
   bottom:0px;
   right:0;
@@ -208,7 +213,16 @@ Main components
   height: 100%;
   text-align: center;
   overflow:auto;
+  
 } 
+
+
+
+.next_star{
+  font-size:1.5em;
+  width:70%;
+  margin:10px auto;   
+}
 
 .viewAll {
   border: 1.5px solid #3e2b09;
@@ -381,20 +395,28 @@ iframe{
 
 
 @media only screen and (min-width: 1170px) {
-  .header {
-    height: 400px;
-    padding-top: 11em;
-  }
-  .header #cd-logo {
-    position: absolute;
-    top: 40px;
-    left: 5%;
-  }
+  
+  
   .header h1 {
-    font-size: 40px;
-    font-size: 2.5rem;
+    font-size:10rem;  
     font-weight: 300;
   }
+
+  .header h3 {
+    font-size: 30px;  
+    font-weight: 700;
+  }
+
+  a{
+    color: #3e2b09;
+  }
+
+  .content{
+    padding-left:12em;
+    padding-right:12em; 
+    text-align:justify;
+  }
+  
 }
 
 #cd-nav ul {
@@ -476,9 +498,7 @@ iframe{
   padding: 1.6em;
   border-bottom: 1px solid #eff2f6;
 }
-#cd-nav li:last-child a {
-  border-bottom: none;
-}
+
 
 
 @media only screen and (min-width: 1170px) {
@@ -508,11 +528,25 @@ iframe{
     opacity: 1;
     padding: .4em;
     margin-left: 1.6em;
-    border-bottom: none;
+    font-family: 'Lobster Two',  Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.3em;
+    -o-transition: border-bottom .5s ease-in;
+    -webkit-transition:border-bottom .5s ease-in;
+    -moz-transition:border-bottom .5s ease-in;
+    transition: border-bottom .5s ease-in;
   }
-  #cd-nav li a:hover {
+
+  #cd-nav li a {
+    border-bottom: 1px solid #eff2f600;
+  }
+  
+
+   #cd-nav li a:hover { 
     color: #00bd9b;
+    cursor: pointer;
+    border-bottom: 1px solid #3e2b09;
   }
+
   #cd-nav.is-fixed ul {
     /* when the user scrolls down, the navigation moves to the bottom right in Fixed position - as on touch devices */
     position: fixed;
@@ -520,7 +554,7 @@ iframe{
     max-width: 400px;
     bottom: 20px;
     top: auto;
-    background: white;
+    background: #251e1a;
     visibility: hidden;
     box-shadow: 0 0 10px rgba(232, 74, 100, 0.4);
     -webkit-transform: scale(0);
@@ -536,6 +570,7 @@ iframe{
     padding: 1.6em;
     margin-left: 0;
     border-bottom: 1px solid #eff2f6;
+    color: #fcce31;
   }
   #cd-nav ul.has-transitions {
     /* this class is used to bring back transitions when the navigation moves at the bottom right */
