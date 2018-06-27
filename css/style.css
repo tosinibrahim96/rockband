@@ -348,7 +348,7 @@ iframe{
   #events{
     position: relative;
     width:100%;
-    padding-top:2em;   
+    margin-top:2em;   
   }
   
   #events .event_img{
@@ -511,6 +511,12 @@ iframe{
   margin-bottom:250px;
 }
 
+#events{
+  position: relative;
+  width:100%;
+  margin-top:500px;   
+}
+
 }
 
 
@@ -520,7 +526,7 @@ iframe{
     position: relative;
     width:100%;
     height:100%;
-    padding-top:6em;   
+    margin-top:500px;   
   }
   
   #events .event_img{
@@ -676,7 +682,7 @@ iframe{
   }
   
 
-   #cd-nav li a:hover,#cd-nav .active { 
+   #cd-nav li a:hover { 
     /* color: #00bd9b; */
     cursor: pointer;
     border-bottom: 1px solid #3e2b09;
