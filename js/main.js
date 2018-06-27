@@ -46,4 +46,16 @@ jQuery(document).ready(function($){
 			}
 		} 
 	}
+
+	var scrollLink = $('.scroll');
+
+	//smooth scrolling
+	scrollLink.click(function(event){
+		event.preventDefault();
+		$('body,html').animate({
+			//scrollTop looks for scrollbar position
+			//how far away is our scrollbar from top, now take my scrollbar to that location
+			scrollTop: $(this.hash).offset().top			
+		},2000);
+	});
 });
