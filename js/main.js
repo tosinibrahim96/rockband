@@ -99,10 +99,14 @@ jQuery(document).ready(function($){
 
 $('.modalbtn').click(function(){
 	
-	if ( $("this").hasClass("ticket")) {
-		$("#ticketModal").fadeIn("slow");
+	if ( $(this).hasClass("ticket")) {
+		$(".ticketModal").fadeIn("slow");
+		$(".modal").fadeIn("slow");
+		hideBody.addClass('hide');
+		console.log("yes");
 	}else{
 		var modalId = this.id;
+		console.log("no");
 	}
 	
 	
